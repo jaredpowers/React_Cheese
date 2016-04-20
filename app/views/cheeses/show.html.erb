@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @cheese.type %>
+</p>
+
+<p>
+  <strong>Belongs to:</strong>
+  <%= @cheese.belongs_to %>
+</p>
+
+<%= link_to 'Edit', edit_cheese_path(@cheese) %> |
+<%= link_to 'Back', cheeses_path %>
