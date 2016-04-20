@@ -10,6 +10,8 @@ class CheesesController < ApplicationController
   # GET /cheeses/1
   # GET /cheeses/1.json
   def show
+    @cheese = Cheese.find(params[:id])
+    @users = @cheese.users
   end
 
   # GET /cheeses/new
@@ -69,6 +71,6 @@ class CheesesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def cheese_params
-      params.require(:cheese).permit(:type, :belongs_to)
+      params.require(:cheese).permit(:kind, :belongs_to)
     end
 end
